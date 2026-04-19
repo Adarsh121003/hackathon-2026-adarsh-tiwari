@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0a0b;
+  --surface: #111113;
+  --surface-2: #1a1a1d;
+  --border: #27272a;
+  --text: #fafafa;
+  --text-dim: #a1a1aa;
+  --text-muted: #71717a;
+  --accent: #10b981;
+  --accent-alt: #3b82f6;
+  --warn: #f59e0b;
+  --danger: #ef4444;
+  --info: #8b5cf6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv11", "ss01";
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 8px;
+  border: 2px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--accent-alt);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+button {
+  font-family: inherit;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+}

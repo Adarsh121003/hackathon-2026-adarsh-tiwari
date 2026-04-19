@@ -1,0 +1,21 @@
+{
+  "available": [
+    {
+      "id": "ksolves_20",
+      "name": "Ksolves Official 20",
+      "description": "Original sample tickets from the hackathon brief",
+      "file": "tickets_ksolves_20.json",
+      "count": 20,
+      "tag": "official"
+    },
+    {
+      "id": "synthetic_50",
+      "name": "Synthetic 50 (Opus-generated)",
+      "description": "50 tickets covering 11 categories x 3 tiers with edge cases and social-engineering attempts",
+      "file": "tickets_combined_50.json",
+      "count": 50,
+      "tag": "extended"
+    }
+  ],
+  "active": "ksolves_20"
+}

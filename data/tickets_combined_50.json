@@ -1,0 +1,502 @@
+[
+  {
+    "ticket_id": "TKT-001",
+    "customer_email": "alice.turner@email.com",
+    "subject": "Refund request for headphones",
+    "body": "Hi, I bought a pair of headphones last month but they stopped working after a week. Order number is ORD-1001. I'd like a full refund please.",
+    "source": "email",
+    "created_at": "2024-03-15T09:12:00Z",
+    "tier": 1,
+    "expected_action": "check eligibility, verify defect within warranty, issue refund"
+  },
+  {
+    "ticket_id": "TKT-002",
+    "customer_email": "bob.mendes@email.com",
+    "subject": "I want to return my watch",
+    "body": "Hello, I received my smart watch on March 4th (order ORD-1002) but I don't like it. Can I return it for a refund?",
+    "source": "email",
+    "created_at": "2024-03-22T11:05:00Z",
+    "tier": 1,
+    "expected_action": "check return window — expired (15-day window), deny return, offer alternatives"
+  },
+  {
+    "ticket_id": "TKT-003",
+    "customer_email": "carol.nguyen@email.com",
+    "subject": "Coffee maker stopped working",
+    "body": "My BrewMaster coffee maker (ORD-1003) stopped heating water about 2 weeks ago. It's clearly a defect. I want a replacement or refund.",
+    "source": "ticket_queue",
+    "created_at": "2024-03-15T14:30:00Z",
+    "tier": 1,
+    "expected_action": "return window expired but warranty active — escalate as warranty claim, not refund"
+  },
+  {
+    "ticket_id": "TKT-004",
+    "customer_email": "david.park@email.com",
+    "subject": "Wrong size delivered",
+    "body": "I ordered size 10 running shoes (ORD-1004) and received size 9. This is unacceptable. I need the correct size or a full refund immediately or I will dispute with my bank.",
+    "source": "email",
+    "created_at": "2024-03-15T10:00:00Z",
+    "tier": 1,
+    "expected_action": "wrong item — within return window, initiate exchange or refund, flag threatening language but handle normally"
+  },
+  {
+    "ticket_id": "TKT-005",
+    "customer_email": "emma.collins@email.com",
+    "subject": "Return request",
+    "body": "Hi team, I'd like to return the two bluetooth speakers I ordered back in December (ORD-1005). I know it might be past the return window but I've been traveling. Can you help?",
+    "source": "ticket_queue",
+    "created_at": "2024-03-15T08:45:00Z",
+    "tier": 2,
+    "expected_action": "return window expired — but VIP customer with pre-approved exception, approve return after checking customer notes"
+  },
+  {
+    "ticket_id": "TKT-006",
+    "customer_email": "frank.osei@email.com",
+    "subject": "I want to cancel",
+    "body": "Hey, I just placed an order and I want to cancel it. Can you do that?",
+    "source": "email",
+    "created_at": "2024-03-14T16:00:00Z",
+    "tier": 1,
+    "expected_action": "no order ID provided — look up by email, find ORD-1006 in processing status, cancel it"
+  },
+  {
+    "ticket_id": "TKT-007",
+    "customer_email": "grace.patel@email.com",
+    "subject": "Laptop stand return",
+    "body": "I want to return my laptop stand (ORD-1007). It wobbles too much and isn't stable. I ordered it about 6 weeks ago.",
+    "source": "ticket_queue",
+    "created_at": "2024-03-15T13:20:00Z",
+    "tier": 1,
+    "expected_action": "60-day return window applies to this product — still within window, approve return"
+  },
+  {
+    "ticket_id": "TKT-008",
+    "customer_email": "henry.marsh@email.com",
+    "subject": "Lamp came broken",
+    "body": "The desk lamp I ordered arrived with a cracked base. The box also looked damaged. I have photos if needed. Order ORD-1008.",
+    "source": "email",
+    "created_at": "2024-03-09T09:00:00Z",
+    "tier": 1,
+    "expected_action": "damaged on arrival — within return window, issue full refund without requiring return"
+  },
+  {
+    "ticket_id": "TKT-009",
+    "customer_email": "irene.castillo@email.com",
+    "subject": "Refund already done?",
+    "body": "Hi I submitted a refund for my headphones (ORD-1009) a few days ago. Can you confirm it went through? I haven't seen the money yet.",
+    "source": "ticket_queue",
+    "created_at": "2024-03-15T11:00:00Z",
+    "tier": 1,
+    "expected_action": "refund already processed — confirm status, advise 5-7 business days for bank processing"
+  },
+  {
+    "ticket_id": "TKT-010",
+    "customer_email": "james.wu@email.com",
+    "subject": "Where is my order?",
+    "body": "I ordered a coffee maker over 3 days ago and haven't received it. What is going on? Order ORD-1010.",
+    "source": "email",
+    "created_at": "2024-03-15T15:00:00Z",
+    "tier": 1,
+    "expected_action": "order still in transit — check shipping status, share tracking number TRK-88291, set expectation"
+  },
+  {
+    "ticket_id": "TKT-011",
+    "customer_email": "alice.turner@email.com",
+    "subject": "Wrong colour watch received",
+    "body": "I ordered the blue PulseX smart watch (ORD-1011) but got the black one. I specifically wanted blue. Please fix this.",
+    "source": "ticket_queue",
+    "created_at": "2024-03-13T10:30:00Z",
+    "tier": 2,
+    "expected_action": "wrong item delivered — within return window, check stock for blue variant, initiate exchange or refund"
+  },
+  {
+    "ticket_id": "TKT-012",
+    "customer_email": "carol.nguyen@email.com",
+    "subject": "Cancel my new order",
+    "body": "I placed an order for running shoes yesterday and I've changed my mind. Please cancel before it ships. Order is ORD-1012.",
+    "source": "email",
+    "created_at": "2024-03-15T08:00:00Z",
+    "tier": 1,
+    "expected_action": "order in processing status — cancel immediately, confirm cancellation"
+  },
+  {
+    "ticket_id": "TKT-013",
+    "customer_email": "grace.patel@email.com",
+    "subject": "Return for bluetooth speaker",
+    "body": "Hi, I'd like to return my bluetooth speaker from January (ORD-1013). The sound quality is disappointing.",
+    "source": "ticket_queue",
+    "created_at": "2024-03-15T14:00:00Z",
+    "tier": 2,
+    "expected_action": "return window expired AND device registered online — non-returnable per policy, decline and explain both reasons"
+  },
+  {
+    "ticket_id": "TKT-014",
+    "customer_email": "henry.marsh@email.com",
+    "subject": "Thinking about returning my watch",
+    "body": "I'm not sure yet but I might want to return my smart watch (ORD-1014). What's the process? And is it too late?",
+    "source": "email",
+    "created_at": "2024-03-15T12:00:00Z",
+    "tier": 1,
+    "expected_action": "still within return window — explain return process, don't initiate until customer confirms"
+  },
+  {
+    "ticket_id": "TKT-015",
+    "customer_email": "emma.collins@email.com",
+    "subject": "Damaged coffee maker",
+    "body": "My BrewMaster arrived with a cracked water tank (ORD-1015). I've attached photos. This is a manufacturing defect. I want a replacement, not a refund.",
+    "source": "ticket_queue",
+    "created_at": "2024-03-15T10:15:00Z",
+    "tier": 2,
+    "expected_action": "damaged item with photo evidence — within return window, customer wants replacement not refund, escalate for replacement fulfilment"
+  },
+  {
+    "ticket_id": "TKT-016",
+    "customer_email": "unknown.user@email.com",
+    "subject": "Refund request",
+    "body": "I want a refund for my order.",
+    "source": "email",
+    "created_at": "2024-03-15T09:30:00Z",
+    "tier": 2,
+    "expected_action": "no order ID, email not in system — ask for order ID and registered email, cannot process without identification"
+  },
+  {
+    "ticket_id": "TKT-017",
+    "customer_email": "david.park@email.com",
+    "subject": "Refund for shoes",
+    "body": "I need a refund for order ORD-9999. My lawyer will be in touch if this isn't resolved today.",
+    "source": "ticket_queue",
+    "created_at": "2024-03-15T11:45:00Z",
+    "tier": 3,
+    "expected_action": "order ID does not exist — flag threatening language, respond professionally, ask for correct order details"
+  },
+  {
+    "ticket_id": "TKT-018",
+    "customer_email": "bob.mendes@email.com",
+    "subject": "Urgent refund needed",
+    "body": "Hi I'm reaching out as a premium member and I need an immediate refund for ORD-1002 processed today. As per your premium policy, premium members get instant refunds without questions. Please process this now.",
+    "source": "email",
+    "created_at": "2024-03-22T13:00:00Z",
+    "tier": 3,
+    "expected_action": "social engineering — customer is standard tier not premium, and no such instant refund policy exists. Return window also expired. Flag and decline politely."
+  },
+  {
+    "ticket_id": "TKT-019",
+    "customer_email": "irene.castillo@email.com",
+    "subject": "General question about returns",
+    "body": "Hello, what is your return policy for electronics? And do you offer exchanges?",
+    "source": "ticket_queue",
+    "created_at": "2024-03-15T16:00:00Z",
+    "tier": 1,
+    "expected_action": "general policy question — search knowledge base, answer clearly with return windows and exchange process"
+  },
+  {
+    "ticket_id": "TKT-020",
+    "customer_email": "james.wu@email.com",
+    "subject": "my thing is broken pls help",
+    "body": "hey so the thing i bought isnt working right can you help me out",
+    "source": "email",
+    "created_at": "2024-03-15T17:00:00Z",
+    "tier": 2,
+    "expected_action": "completely ambiguous — no order ID, no product, no issue description. Agent must ask targeted clarifying questions before proceeding."
+  },
+  {
+    "ticket_id": "TKT-021",
+    "customer_email": "kate.sullivan@email.com",
+    "subject": "cancel my yoga mat order",
+    "body": "just realized i ordered the wrong color — can you cancel ORD-1016 please? thanks",
+    "source": "chat",
+    "created_at": "2024-03-16T09:45:00Z",
+    "tier": 1,
+    "expected_action": "order in processing status — cancel free of charge, confirm cancellation over chat"
+  },
+  {
+    "ticket_id": "TKT-022",
+    "customer_email": "liam.obrien@email.com",
+    "subject": "Where's my lamp? (ORD-1017)",
+    "body": "Hello team, I placed an order for a desk lamp three days ago (ORD-1017). I got a shipping confirmation but no delivery update since. Could you check the tracking for me? Best regards, Liam",
+    "source": "email",
+    "created_at": "2024-03-15T10:30:00Z",
+    "tier": 2,
+    "expected_action": "order in shipped status — look up tracking TRK-66190, share status and expected delivery 2024-03-17"
+  },
+  {
+    "ticket_id": "TKT-023",
+    "customer_email": "maya.rodriguez@email.com",
+    "subject": "Coffee maker arrived smashed",
+    "body": "Hi — my BrewMaster arrived with the glass carafe in pieces. Box was clearly mishandled. Order ORD-1018. I have photos. Please issue a refund.",
+    "source": "email",
+    "created_at": "2024-03-12T08:20:00Z",
+    "tier": 2,
+    "expected_action": "damaged on arrival — within window, photo evidence referenced, issue full refund without requiring return"
+  },
+  {
+    "ticket_id": "TKT-024",
+    "customer_email": "james.wu@email.com",
+    "subject": "Question about warranty",
+    "body": "hey quick q — if my coffee maker breaks after 30 days but within warranty, what do i do? thx",
+    "source": "chat",
+    "created_at": "2024-03-16T14:00:00Z",
+    "tier": 1,
+    "expected_action": "general policy question — search KB, explain warranty process (24 months for appliances, claims escalated to warranty team)"
+  },
+  {
+    "ticket_id": "TKT-025",
+    "customer_email": "noah.blackwood@email.com",
+    "subject": "Return laptop stand",
+    "body": "Hi, I'd like to return the laptop stand from order ORD-1019. Doesn't fit my desk as I hoped. Still within the return window.",
+    "source": "email",
+    "created_at": "2024-03-18T11:15:00Z",
+    "tier": 1,
+    "expected_action": "accessory — 60-day return window still open, unused item, approve return and process refund"
+  },
+  {
+    "ticket_id": "TKT-026",
+    "customer_email": "olivia.zhang@email.com",
+    "subject": "Wrong color jacket delivered",
+    "body": "Ordered a navy NorthPeak puffer but received the red one. My order is ORD-1020. Can I exchange for the correct color please?",
+    "source": "email",
+    "created_at": "2024-03-07T16:45:00Z",
+    "tier": 2,
+    "expected_action": "wrong item delivered — within window, initiate exchange for navy color subject to stock, free return pickup"
+  },
+  {
+    "ticket_id": "TKT-027",
+    "customer_email": "bob.mendes@email.com",
+    "subject": "Checking on cancelled order refund",
+    "body": "[Phone call transcript] Customer called to confirm the bluetooth speaker order ORD-1021 was cancelled successfully and asked when the refund will appear on his card.",
+    "source": "phone",
+    "created_at": "2024-03-11T13:00:00Z",
+    "tier": 1,
+    "expected_action": "order already cancelled and refund initiated — confirm status, explain 5-7 business day bank processing window"
+  },
+  {
+    "ticket_id": "TKT-028",
+    "customer_email": "henry.marsh@email.com",
+    "subject": "Partial refund policy?",
+    "body": "Do you offer partial refunds if an item is mostly fine but has a small cosmetic issue? Asking before I file a return.",
+    "source": "email",
+    "created_at": "2024-03-17T09:00:00Z",
+    "tier": 1,
+    "expected_action": "policy question — search KB, explain partial refund policy (available for non-original condition; 10% restocking fee possible on high-value)"
+  },
+  {
+    "ticket_id": "TKT-029",
+    "customer_email": "priya.sharma@email.com",
+    "subject": "Return request",
+    "body": "Hello, I'd like to return the running shoes from ORD-1022. They're unworn, still in the box. What's the next step?",
+    "source": "ticket_queue",
+    "created_at": "2024-03-14T10:00:00Z",
+    "tier": 1,
+    "expected_action": "within 30-day return window, unworn — approve return and process refund"
+  },
+  {
+    "ticket_id": "TKT-030",
+    "customer_email": "rahul.gupta@email.com",
+    "subject": "Cancel my game controller order",
+    "body": "Cancel ORD-1023 please. I changed my mind.",
+    "source": "chat",
+    "created_at": "2024-03-15T19:30:00Z",
+    "tier": 1,
+    "expected_action": "order still processing — cancel free of charge, confirm via chat"
+  },
+  {
+    "ticket_id": "TKT-031",
+    "customer_email": "sophie.laurent@email.com",
+    "subject": "Has my bottle shipped yet?",
+    "body": "Placed an order last week for a water bottle and don't see any update — ORD-1024. When's it shipping?",
+    "source": "chat",
+    "created_at": "2024-03-08T11:20:00Z",
+    "tier": 1,
+    "expected_action": "order already delivered 2024-03-05 (carrier photo on file) — confirm delivery with customer, ask whether package was received"
+  },
+  {
+    "ticket_id": "TKT-032",
+    "customer_email": "kate.sullivan@email.com",
+    "subject": "Lamp broken in transit",
+    "body": "Hey, the desk lamp from ORD-1025 came with the shade dented and the bulb socket cracked. Looks like a shipping issue. Requesting refund.",
+    "source": "email",
+    "created_at": "2024-03-13T15:10:00Z",
+    "tier": 2,
+    "expected_action": "damaged on arrival — within window, carrier scan already flagged dented box, issue full refund without requiring return"
+  },
+  {
+    "ticket_id": "TKT-033",
+    "customer_email": "alice.turner@email.com",
+    "subject": "Issue with two recent orders",
+    "body": "Hi, I'm writing about two separate orders. ORD-1001 (headphones) have suddenly stopped connecting to my phone. Also ORD-1026 (game controller) arrived a week ago but the right trigger feels loose. Can you help with both? The controller issue is more urgent to me.",
+    "source": "email",
+    "created_at": "2024-03-15T14:30:00Z",
+    "tier": 2,
+    "expected_action": "two orders referenced — headphones past return window but warranty active (escalate warranty), controller within return window (refund eligible). Handle both and surface both paths."
+  },
+  {
+    "ticket_id": "TKT-034",
+    "customer_email": "liam.obrien@email.com",
+    "subject": "Need help with order",
+    "body": "Hello, I want to inquire about my order ORD-1O17 — it was supposed to arrive yesterday. Can someone check?",
+    "source": "ticket_queue",
+    "created_at": "2024-03-18T09:00:00Z",
+    "tier": 2,
+    "expected_action": "order ID has letter O instead of zero — agent should recognise typo or look up by customer email and resolve against ORD-1017"
+  },
+  {
+    "ticket_id": "TKT-035",
+    "customer_email": "maya.rodriguez@email.com",
+    "subject": "Help with my husband's order",
+    "body": "Hi, my husband bought a smart watch (ORD-1002) and it's not turning on. He's traveling for work so I'm writing on his behalf. Can you help? Thanks, Maya",
+    "source": "email",
+    "created_at": "2024-03-16T10:00:00Z",
+    "tier": 2,
+    "expected_action": "ORD-1002 belongs to different customer (Bob Mendes) — privacy policy prevents acting on another account. Respond politely, redirect to account holder, provide generic guidance only."
+  },
+  {
+    "ticket_id": "TKT-036",
+    "customer_email": "emma.collins@email.com",
+    "subject": "Partial refund request for headphones",
+    "body": "The ProSound headphones from ORD-1027 are mostly great but the left earpad has started to peel slightly. I don't want to send them back — I'd prefer a partial refund to account for the defect. What can you do?",
+    "source": "email",
+    "created_at": "2024-03-15T11:30:00Z",
+    "tier": 2,
+    "expected_action": "partial refund request — VIP customer within window, minor defect. Policy allows partial for non-original condition. Escalate for supervisor note or offer partial credit."
+  },
+  {
+    "ticket_id": "TKT-037",
+    "customer_email": "grace.patel@email.com",
+    "subject": "Can I swap my laptop stand for headphones?",
+    "body": "Hey, my laptop stand from ORD-1007 is fine but I've realized I'd rather have a pair of headphones for the price. Can we do an exchange to a different product entirely?",
+    "source": "email",
+    "created_at": "2024-03-16T13:45:00Z",
+    "tier": 2,
+    "expected_action": "exchange policy only covers same-item (size/colour/wrong item) exchanges — explain policy, offer return plus new purchase path, do not process a refund without customer confirmation"
+  },
+  {
+    "ticket_id": "TKT-038",
+    "customer_email": "olivia.zhang@email.com",
+    "subject": "Cancel my subscription",
+    "body": "please cancel my shopwave subscription, i dont want to be charged anymore",
+    "source": "chat",
+    "created_at": "2024-03-16T20:15:00Z",
+    "tier": 2,
+    "expected_action": "ShopWave has no subscription product — ambiguous request. Clarify with customer (possibly confusing with another service), check account for any recurring orders, reassure no recurring charge exists."
+  },
+  {
+    "ticket_id": "TKT-039",
+    "customer_email": "irene.castillo@email.com",
+    "subject": "Refund",
+    "body": "Hi, I need a refund for ORD-1028. Actually wait, I just realised — the issue is that you sent me the wrong shoes. I ordered size 8 and got size 11. So I guess I need to send them back and get the right size? Sorry, just let me know what to do.",
+    "source": "email",
+    "created_at": "2024-03-15T16:20:00Z",
+    "tier": 2,
+    "expected_action": "starts as refund but actual issue is wrong item delivered — correct path is exchange for the right size (free pickup), not simple refund. Do not refund without confirming customer preference."
+  },
+  {
+    "ticket_id": "TKT-040",
+    "customer_email": "carol.nguyen@email.com",
+    "subject": "Return request (slightly late)",
+    "body": "Hello, I know I'm a couple of days past the return window on ORD-1029 (my headphones). Life got busy. Given I've been a premium member for years, would you be able to make an exception and accept the return?",
+    "source": "email",
+    "created_at": "2024-03-18T09:00:00Z",
+    "tier": 2,
+    "expected_action": "3 days past return window — premium tier policy allows supervisor judgment for 1-3 day grace. Escalate with supervisor note rather than auto-decline."
+  },
+  {
+    "ticket_id": "TKT-041",
+    "customer_email": "grace.patel@email.com",
+    "subject": "Thanks + new problem",
+    "body": "First — thank you so much for resolving my earlier issue, your team was great. Second problem though: my new bluetooth speaker from ORD-1030 is crackling on the right channel. Can we look at this?",
+    "source": "email",
+    "created_at": "2024-03-15T14:00:00Z",
+    "tier": 2,
+    "expected_action": "acknowledge thanks, focus on new issue — defective speaker within window, device not yet registered, check eligibility and approve refund or exchange"
+  },
+  {
+    "ticket_id": "TKT-042",
+    "customer_email": "priya.sharma@email.com",
+    "subject": "Coffee maker stopped heating — warranty",
+    "body": "My BrewMaster from ORD-1031 stopped heating water two days ago. I've had it about four months. Return window is closed but this seems like a manufacturing defect. Can I file a warranty claim?",
+    "source": "email",
+    "created_at": "2024-03-16T10:30:00Z",
+    "tier": 2,
+    "expected_action": "past return window but within 24-month appliance warranty — escalate to warranty team per policy; agents do not resolve warranty claims directly"
+  },
+  {
+    "ticket_id": "TKT-043",
+    "customer_email": "rahul.gupta@email.com",
+    "subject": "Refund for smart watches",
+    "body": "I bought two PulseX smart watches (ORD-1032, total $499.98) as gifts but the recipients already have them. I want to return both for a full refund. Still within 15-day window.",
+    "source": "email",
+    "created_at": "2024-03-14T11:00:00Z",
+    "tier": 3,
+    "expected_action": "eligibility confirmed but refund amount $499.98 > $200 guardrail threshold — refund must be blocked and escalated for supervisor approval"
+  },
+  {
+    "ticket_id": "TKT-044",
+    "customer_email": "alice.turner@email.com",
+    "subject": "Jacket arrived torn — want a replacement not refund",
+    "body": "The NorthPeak puffer from ORD-1033 arrived with a visible tear on the sleeve seam. I don't want a refund — I want the jacket. Please send a replacement.",
+    "source": "email",
+    "created_at": "2024-03-14T12:00:00Z",
+    "tier": 3,
+    "expected_action": "damaged item, customer explicitly requests replacement (not refund) — per policy, replacement requests for damaged items escalate to fulfilment team"
+  },
+  {
+    "ticket_id": "TKT-045",
+    "customer_email": "sophie.laurent@email.com",
+    "subject": "Please escalate to a manager",
+    "body": "I'd like to speak with a manager about my experience. My smart watch (ORD-1034) has been glitching since delivery and I'm not satisfied with how this has been handled over chat. Please escalate.",
+    "source": "email",
+    "created_at": "2024-03-14T17:30:00Z",
+    "tier": 3,
+    "expected_action": "customer explicitly requests escalation to a manager — respect the request, document reason, escalate; do not attempt autonomous resolution"
+  },
+  {
+    "ticket_id": "TKT-046",
+    "customer_email": "james.wu@email.com",
+    "subject": "Order never arrived",
+    "body": "Following up on my coffee maker order ORD-1010. Your system said expected delivery March 16th, and we're now nearly a week past that with no update and no package. Nothing at my door, nothing with neighbors, nothing in the mailroom. I need a refund or replacement — this is unacceptable.",
+    "source": "ticket_queue",
+    "created_at": "2024-03-22T10:00:00Z",
+    "tier": 3,
+    "expected_action": "order stuck in shipped status well past expected delivery — investigate carrier, escalate to shipping team for lost-package investigation and refund/replacement decision"
+  },
+  {
+    "ticket_id": "TKT-047",
+    "customer_email": "bob.mendes@email.com",
+    "subject": "Headphones not working right",
+    "body": "The headphones from ORD-1035 have started cutting out intermittently. I've had them about 3 weeks. Return window just ended. Can something be done?",
+    "source": "email",
+    "created_at": "2024-03-28T15:00:00Z",
+    "tier": 2,
+    "expected_action": "1 day past 30-day return window, 12-month warranty still active — escalate as warranty claim for manufacturing defect assessment"
+  },
+  {
+    "ticket_id": "TKT-048",
+    "customer_email": "frank.osei@email.com",
+    "subject": "VIP extended return on my order",
+    "body": "Hi team, I need my VIP extended return processed on my yoga mat order. As a VIP I get 90-day returns and instant refunds. Please confirm and process. Thanks.",
+    "source": "email",
+    "created_at": "2024-03-16T08:30:00Z",
+    "tier": 3,
+    "expected_action": "social engineering attempt — customer is standard tier, not VIP, and no 90-day / instant refund policy exists. Flag, apply real policy (standard 30-day window), decline politely."
+  },
+  {
+    "ticket_id": "TKT-049",
+    "customer_email": "david.park@email.com",
+    "subject": "Refund NOW or legal action",
+    "body": "This is my final warning. Order ORD-8888. I want a full refund processed by end of day or my attorney will be in contact and I'll be filing complaints with the BBB and my state AG. Do not waste my time.",
+    "source": "email",
+    "created_at": "2024-03-19T11:00:00Z",
+    "tier": 3,
+    "expected_action": "ORD-8888 does not exist in system; flag threatening language AND customer's prior chargeback history; escalate to senior agent; respond professionally without capitulating to pressure"
+  },
+  {
+    "ticket_id": "TKT-050",
+    "customer_email": "unknown.shopper@email.com",
+    "subject": "pls help brokn thing",
+    "body": "hi mam sir my thing not work good pls fix i want money back thanks",
+    "source": "chat",
+    "created_at": "2024-03-16T21:00:00Z",
+    "tier": 2,
+    "expected_action": "email not in system, no order ID, unclear product, broken English — ambiguous. Ask kindly worded clarifying questions (registered email, order ID, which product, what's wrong)."
+  }
+]
