@@ -11,7 +11,8 @@ either an auto-resolution or a human-ready escalation — with a full, replayabl
 trail for every step.
 
 ---
-
+## Video
+https://drive.google.com/file/d/13zc1BgwW-mJLE-sRHfSG2MVEAUXNSFq4/view?usp=drive_link
 ## Overview
 
 Sentinel is a two-agent support automation pipeline:
